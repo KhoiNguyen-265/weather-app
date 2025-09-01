@@ -8,8 +8,57 @@
         <!-- Reset CSS -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
 
+        <!-- Embed Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        />
+
         <!-- Style CSS -->
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-    <body></body>
+    <body>
+        <div class="weather">
+            <h1 class="weather__heading">Weather App</h1>
+            <!-- Search -->
+            <div class="weather__search">
+                <input
+                    type="text"
+                    name="city"
+                    class="weather__input"
+                    placeholder="Enter city name..."
+                    spellcheck="false"
+                />
+                <button class="weather__btn">
+                    <i class="fa-solid fa-magnifying-glass weather__icon"></i>
+                </button>
+            </div>
+
+            <!-- Result -->
+            <div class="weather__result">
+                <img src="./assets/imgs/rain.png" alt="" class="weather__img" />
+                <div class="weather__info">
+                    <h2 class="weather__temp">22°C</h2>
+                    <p class="weather__city">Ha Noi</p>
+                    <p class="weather__desc">moderate rain</p>
+                </div>
+                <div class="weather__hourly-forecast">
+                    <div class="hourly-item">
+                        <img src="" alt="" class="hourly-item__img" />
+                        <p class="hourly-item__title"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+        <script></script>
+    </body>
 </html>

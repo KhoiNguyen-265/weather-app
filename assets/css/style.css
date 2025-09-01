@@ -1,0 +1,147 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    background: #222;
+}
+
+input,
+button,
+textarea,
+select {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.weather {
+    width: 90%;
+    max-width: 470px;
+    padding: 40px 36px;
+    border-radius: 20px;
+    margin: 50px auto 0;
+    background-image: linear-gradient(
+        -225deg,
+        #dfffcd 0%,
+        #90f9c4 48%,
+        #39f3bb 100%
+    );
+    background-image: linear-gradient(135deg, #9890e3 0%, #22c46b 100%);
+}
+
+.weather__heading {
+    font-size: clamp(3.2rem, 3vw, 4.8rem);
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    background-image: linear-gradient(
+        135deg,
+        #f3e7e9 0%,
+        #e3eeff 99%,
+        #e3eeff 100%
+    );
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.weather__search {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.weather__input {
+    border: 2px solid #ebebeb;
+    padding: 12px 24px;
+    width: 100%;
+    border-radius: 999px;
+    font-style: 1.6rem;
+    font-weight: 500;
+    background: #ebebeb;
+}
+
+.weather__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ebebeb;
+    cursor: pointer;
+    background: #ebebeb;
+    flex-shrink: 0;
+}
+
+.weather__icon {
+    color: #666;
+    transform: scale(1.2);
+}
+
+/* Result */
+.weather__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather__img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.weather__temp {
+    margin-top: -10px;
+    font-size: clamp(4.2rem, 4vw, 6rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+}
+
+.weather__city,
+.weather__desc {
+    margin-top: 8px;
+    color: #fff;
+    font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+    text-align: center;
+    max-width: 220px;
+    line-height: 1.2;
+}
+.weather__hourly-forecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.hourly-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    color: #fff;
+}
