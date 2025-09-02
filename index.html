@@ -42,6 +42,9 @@
                 </button>
             </div>
 
+            <!-- Error -->
+            <p class="weather__error">Please enter a city!</p>
+
             <!-- Result -->
             <div class="weather__result">
                 <img src="./assets/imgs/rain.png" alt="" class="weather__img" />
@@ -50,15 +53,35 @@
                     <p class="weather__city">Ha Noi</p>
                     <p class="weather__desc">moderate rain</p>
                 </div>
-                <div class="weather__hourly-forecast">
-                    <div class="hourly-item">
-                        <img src="" alt="" class="hourly-item__img" />
-                        <p class="hourly-item__title"></p>
+
+                <div class="weather__more">
+                    <div class="weather-item">
+                        <img
+                            src="./assets/imgs/humidity.png"
+                            alt=""
+                            class="weather-item__img"
+                        />
+                        <div class="weather-item__info">
+                            <p class="weather-item__number humidity">50%</p>
+                            <p class="weather-item__desc">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="weather-item">
+                        <img
+                            src="./assets/imgs/wind.png"
+                            alt=""
+                            class="weather-item__img"
+                        />
+                        <div class="weather-item__info">
+                            <p class="weather-item__number wind-speed">
+                                15 km/h
+                            </p>
+                            <p class="weather-item__desc">Wind Speed</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <script src="./main.js"></script>
-        <script></script>
     </body>
 </html>

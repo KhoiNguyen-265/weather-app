@@ -49,16 +49,7 @@ button {
     font-weight: 600;
     line-height: 1.25;
     text-align: center;
-    background-image: linear-gradient(
-        135deg,
-        #f3e7e9 0%,
-        #e3eeff 99%,
-        #e3eeff 100%
-    );
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 
 .weather__search {
@@ -74,7 +65,6 @@ button {
     padding: 12px 24px;
     width: 100%;
     border-radius: 999px;
-    font-style: 1.6rem;
     font-weight: 500;
     background: #ebebeb;
 }
@@ -90,18 +80,36 @@ button {
     cursor: pointer;
     background: #ebebeb;
     flex-shrink: 0;
+    transition: background-color 0.3s;
 }
 
 .weather__icon {
-    color: #666;
+    color: #999;
     transform: scale(1.2);
+    transition: color 0.3s;
+}
+
+.weather__btn:hover {
+    background: #5cc98d;
+}
+
+.weather__btn:hover .weather__icon {
+    color: #222;
+}
+
+.weather__error {
+    display: none;
+    margin-top: 12px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: rgb(180, 48, 48);
 }
 
 /* Result */
 .weather__result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none;
+    text-align: center;
 }
 
 .weather__img {
@@ -121,27 +129,41 @@ button {
 
 .weather__city,
 .weather__desc {
-    margin-top: 8px;
+    margin: 8px auto 0;
     color: #fff;
     font-size: clamp(1.6rem, 2.4vw, 2.2rem);
     text-align: center;
     max-width: 220px;
     line-height: 1.2;
 }
-.weather__hourly-forecast {
+
+.weather__more {
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin-top: 30px;
-    white-space: nowrap;
-    overflow-x: auto;
+    width: 100%;
+    color: #fff;
 }
 
-.hourly-item {
+.weather-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex: 0 0 auto;
-    color: #fff;
+    gap: 12px;
+}
+
+.weather-item__img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.weather-item__number {
+    font-size: clamp(2.6rem, 3vw, 3rem);
+}
+
+.weather-item__desc {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    text-align: left;
 }
